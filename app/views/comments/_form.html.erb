@@ -1,0 +1,6 @@
+<%= form_for ([@book, @book.comments.build]) do |f| %>
+    <%= f.text_area :description, class:"single-input", placeholder:"enter comment", required:'true' %>
+    <%= f.submit "Book comment", class:"btn btn-pimary" %>
+
+
+<% end %>

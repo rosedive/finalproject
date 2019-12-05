@@ -1,0 +1,46 @@
+<%= form_with(model: user, local: true) do |form| %>
+  <% if user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+        <% user.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+<div class="container register-form">
+            <div class="form">
+                <div class="note">
+                    <p>Welcome  Please Register Inorder To Ordered Book</p>
+                </div>
+                <div class="form-content">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <%= form.text_field :name, class:"form-control", placeholder:"Your Names *" %>
+                            </div>
+                            <div class="form-group">
+                                <%= form.text_field :email, class:"form-control",  placeholder:"Email *" %>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <%= form.text_field :user_type, class:"form-control",  placeholder:"User Type *" %>
+                            </div>
+                            <div class="form-group">
+                                <%= form.password_field :password, class:"form-control", placeholder:"Password *" %>
+                            </div>
+                        </div>
+                    </div>
+                    <div class:"form-group">
+                      <%= form.password_field :password_confirmation, class:"form-control", placeholder:"Password Confirmation *" %>
+                    </div><br><br>
+                    <div class="form-group">
+                    <%= form.submit class:"btnSubmit" %>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <% end %>

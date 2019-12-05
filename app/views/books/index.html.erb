@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+<h1 style="text-align:center">All Books</h1>
+<br>
+<div class="container">
+  <div class="row">
+    <div class="card-group">
+    <% @books.each do |book| %>
+      <div class="">
+        <div class="card ml-2 h-100" >
+          <%= image_tag book.image.url %>
+          <div class="card-body">
+            <h5 class="card-title">
+            <%= book.book_title %>
+            </h5>
+            <p class="card-text"><%= book.author %></p>
+            <p class="card-text"><%= book.status %></p>
+            <p class="card-text"><small class="text-muted"><%= book.created_at %></small></p>
+            <%= link_to 'Order Book', book, class:"btn btn-primary" %>
+          </div>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+  <%= paginate @books %>
+</div>
+

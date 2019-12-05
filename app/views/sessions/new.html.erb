@@ -1,0 +1,24 @@
+<p id='alert'><%= alert %></p>
+<div class="container register-form">
+<%= form_with(scope: :session, url: sessions_path, local: true) do |form| %>
+            <div class="form">
+                <div class="note">
+                    <p>Log In Here Please!!!!!!!!!!!</p>
+                </div>
+                <div class="form-content">
+                <div class:"form-group">
+                  <%= form.text_field :email, class:"form-control", placeholder:"Email" %>
+                </div><br><br>
+                <div class:"form-group">
+                  <%= form.password_field :password, class:"form-control", placeholder:'Password' %>
+                </div><br><br>
+                <div class="form-group">
+                   <%= form.submit 'Login',  class:"btnSubmit" %>
+                </div>
+                </div>
+            </div>
+        </div>
+<% end %>
+
+
+
