@@ -8,7 +8,7 @@ Things you may want to cover:
 version
 Ruby version '2.6.3'
 
-Rails version '6.0.1'
+Rails version '5.2.4'
 
 System dependencies
 
@@ -36,7 +36,7 @@ concept A Book Library App is a software built to handle the primary housekeepin
 
 Function List
 
-user creation, update, show or view, approve and delete functions
+user creation, update, show and delete
 
 user login function
 
@@ -52,15 +52,7 @@ request function using send or create order_book, approve and rejected
 
 User registration Name, email, User_type and password are required
 
-Admin Function
-
-Validation function
-
-Profile editing function
-
-Profile image can be set as an icon
-
-I will make CRUD by generating scaffold of controller, model and view
+rails admin Function
 
 Table definition
 
@@ -81,17 +73,14 @@ https://docs.google.com/document/d/132lvagQPu0dnC5kTd3JchKoXHPioz6zSTx76mEzlQXs/
 table definition
 https://docs.google.com/document/d/15VSOcQLsepznu_r-kNxihJyncJvWL3_wIc0prWA045c/edit?usp=sharing
 
-Scheduled use Gems
-Backend:
-. bcrypt . jbuilder
-
-Frontend:
-. coderay . jquery-rails . redcarpet . sass-rails
-
 Authentication
-. devise
+. follow
 
-other gems
-. capistrano . unicorn . carrierwave . mini_magick . fog-aws . search_cop, gem 'kaminari'
-gem 'launchy'
+Scheduled use Gems
+
+gem 'bcrypt'
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'rails_admin'
+gem 'kaminari'
 
