@@ -36,23 +36,21 @@ concept A Book Library App is a software built to handle the primary housekeepin
 
 Function List
 
-user creation, update, show and delete
+* user creation, update, show and delete
 
-user login function
+* user login function
 
-login using username and password
+* login using email and password
 
-Logout function
+* Logout function
 
-signin function using username, user_type and password
+* books create, show, edit and delete functions
 
-books create, display, edit and delete functions
+*  request function using send or create order_book, approve and rejected
 
-request function using send or create order_book, approve and rejected
+* User registration Name, email, User_type and password are required
 
-User registration Name, email, User_type and password are required
-
-rails admin Function
+* rails admin Function
 
 Table definition
 
@@ -73,10 +71,11 @@ https://docs.google.com/document/d/132lvagQPu0dnC5kTd3JchKoXHPioz6zSTx76mEzlQXs/
 table definition
 https://docs.google.com/document/d/15VSOcQLsepznu_r-kNxihJyncJvWL3_wIc0prWA045c/edit?usp=sharing
 
-Authentication
-. follow
+* Authentication
 
-Scheduled use Gems
+ follow
+
+* Scheduled use Gems
 
 gem 'bcrypt'
 gem 'carrierwave'
