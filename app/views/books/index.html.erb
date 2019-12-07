@@ -1,6 +1,9 @@
 <p id="notice"><%= notice %></p>
+<%= link_to 'Create  New  book', new_book_path ,class:'btn btn-outline-success'%>
+
 <h1 style="text-align:center">All Books</h1>
 <br>
+
 <div class="container">
   <div class="row">
     <div class="card-group">
@@ -13,9 +16,12 @@
             <%= book.book_title %>
             </h5>
             <p class="card-text"><%= book.author %></p>
+            <p class="card-text"><%= book.description %></p>
             <p class="card-text"><%= book.status %></p>
             <p class="card-text"><small class="text-muted"><%= book.created_at %></small></p>
-            <%= link_to 'Order Book', book, class:"btn btn-primary" %>
+            <%= link_to 'Show', book, class:"btn btn-info" %>
+            <%= link_to 'Edit', edit_book_path(book), class:"btn btn-warning" %>
+            <%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-danger" %>
           </div>
         </div>
       </div>
@@ -24,4 +30,5 @@
   </div>
   <%= paginate @books %>
 </div>
+
 

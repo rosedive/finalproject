@@ -16,17 +16,23 @@
             <%= @book.author %>
           </p>
           <p class="card-text">
+          <strong>Book Description:</strong>
+            <%= @book.description %>
+          </p>
+          <p class="card-text">
           <strong>Book Status:</strong>
             <%= @book.status %>
           </p>
+         
           <p class="card-text">
             <strong>User:</strong>
             <%= @book.user.name %>
           </p>
-          <%= button_to 'Order Now', books_path, class:'btn btn-primary' %><br><br>
           <%= render 'comments/comment' %><br><br>
         </div>
       </div>
     </div>
   </div>
+  <%= button_to 'Order Now', books_path, class:'btn btn-primary' %> &nbsp;&nbsp;&nbsp;<br><br>
+  <%= link_to 'Back', books_path, class:'btn btn-secondary' %>
 </div>

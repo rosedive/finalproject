@@ -1,4 +1,5 @@
 class BooksController < ApplicationController
+  before_action :authorize
   before_action :set_book, only: [:show, :edit, :update, :destroy]
 
   def index
@@ -53,6 +54,6 @@ class BooksController < ApplicationController
     end
 
     def book_params
-      params.require(:book).permit(:book_title, :author, :status, :image, :image_cache, :search, :user_id)
+      params.require(:book).permit(:book_title, :author, :description, :status, :image, :image_cache, :search, :user_id)
     end
 end

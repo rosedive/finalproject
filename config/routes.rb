@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   get 'relationships/destroy'
   resources :comments
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  root 'users#new'
+  root 'books#index'
   resources :relationships, only: [:create, :destroy]
   resources :sessions
   resources :order_books

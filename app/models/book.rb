@@ -5,6 +5,7 @@ class Book < ApplicationRecord
     belongs_to :user
     validates :book_title, presence: true
     validates :author, presence: true
+    validates :description, presence: true
     validates :status, presence: true
     validates :image, presence: true
     def self.search(search)
