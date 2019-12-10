@@ -1,5 +1,11 @@
 RailsAdmin.config do |config|
-
+  config.model 'User' do
+    list do
+      configure :password_digest do
+        hide
+      end
+    end
+  end
   ### Popular gems integration
   config.parent_controller = "::ApplicationController"
   config.authorize_with do |controller|
@@ -12,6 +18,7 @@ RailsAdmin.config do |config|
     I18n.default_locale = :ja
     I18n.locale = params[:locale] || I18n.default_locale
   end
+
   ## == Devise ==
   # config.authenticate_with do
   #   warden.authenticate! scope: :user
