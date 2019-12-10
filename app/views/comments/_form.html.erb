@@ -1,6 +1,7 @@
 <%= form_for ([@book, @book.comments.build]) do |f| %>
     <%= f.text_area :description, class:"single-input", placeholder:"enter comment", required:'true' %>
-    <%= f.submit "Create comment", class:"btn btn-warning" %>
 
+    <%= f.hidden_field :user_id, value: current_user.id %>
+    <%= f.submit "Create comment", class:"btn btn-warning" %>
 
 <% end %>

@@ -43,7 +43,7 @@ class CommentsController < ApplicationController
 before_action :find_post
  before_action :find_comment, only: [:destroy, :edit , :update]
 def create
-@comment = @book.comments.create(params[:comment].permit(:description))
+@comment = @book.comments.create(params[:comment].permit(:description,:user_id))
 @comment.save
 if @comment.save
   redirect_to book_path(@book)

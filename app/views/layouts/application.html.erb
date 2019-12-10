@@ -25,9 +25,9 @@
       </li>
     <% end %>
     <% if logged_in? %>
-      <li class="nav-item">
-        <%= link_to "Profile", user_path(current_user.id), class:"nav-link", style:"color:#fff;" %>
-      </li>
+    <li class="nav-item">
+      <%= link_to "Profile", user_path(current_user.id), class:"nav-link", style:"color:#fff;" %>
+    </li>
       <li class="nav-item">
         <%= link_to "Books", books_path, class:"nav-link", style:"color:#fff;" %>
       </li>

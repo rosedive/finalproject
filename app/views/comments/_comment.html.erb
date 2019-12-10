@@ -3,7 +3,7 @@
     <% if comment.id.present? %>
       <li>
         <p><br><%= comment.description %><br>
-        <% if logged_in? %>
+        <% if comment.user.id== current_user.id%>
         <%= link_to "delete", [comment.book, comment], method: :delete, class:"btn btn-danger" %>
         <%= link_to "edit ", edit_book_comment_path(comment.book, comment), class:"btn btn-primary" %></p>
         </li>
