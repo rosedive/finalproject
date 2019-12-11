@@ -46,7 +46,7 @@ Function List
 
 *  show function of the description of book
 
-* User registration Name, email, User_type and password are required
+* User registration Name, email and password are required
 
 * rails admin Function
 

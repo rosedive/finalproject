@@ -6,7 +6,6 @@ Rails.application.routes.draw do
   root 'books#index'
   resources :relationships, only: [:create, :destroy]
   resources :sessions
-  resources :order_books
   resources :users
   resources :books do 
     resources :comments
