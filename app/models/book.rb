@@ -1,7 +1,7 @@
 class Book < ApplicationRecord
     paginates_per 2
     mount_uploader :image, ImageUploader
-    has_many :comments
+    has_many  :comments,  dependent:   :destroy
     belongs_to :user
     validates :book_title, presence: true
     validates :author, presence: true
